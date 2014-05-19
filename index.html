@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Lokacije za prikupljanje pomoci</title>
+
+  <link href="recline/vendor/leaflet/0.4.4/leaflet.css" rel="stylesheet" />
+  <!-- [if lte IE 9]>
+  <link href="recline/vendor/leaflet/0.4.4/leaflet.ie.css" rel="stylesheet" />
+  <![endif]-->
+  <link href="recline/vendor/leaflet.markercluster/MarkerCluster.css" rel="stylesheet" />
+  <link rel="stylesheet" href="recline/vendor/leaflet.markercluster/MarkerCluster.Default.css" rel="stylesheet" />
+
+  <style type="text/css">
+    @import url(http://fonts.googleapis.com/css?family=PT+Sans);
+    body {
+      font-family: 'PT Sans', Georgia, sans-serif;
+    }
+
+    .recline-map .map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .loading {
+      position: absolute;
+      z-index: 10000;
+      top: 45%;
+      left: 40%;
+    }
+
+    .logo {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      z-index: 10000;
+    }
+    .logo img {
+      display: block;
+    }
+
+    .header {
+      position: absolute;
+      top: 15px;
+      right: 30px;
+      z-index: 10000;
+      font-size: 22px;
+      font-weight: bold;
+      color: #959A9D;
+    }
+
+    .header a {
+      color: #333;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+<div class="loading">
+  <h2>
+    Loading data <img src="http://assets.okfn.org/images/icons/ajaxload-circle.gif" alt="loading" />
+  </h2>
+</div>
+<!-- 
+<div class="logo">
+  <a href="/"><img src="../images/logo_odhd3_sm.png" width="206" height="68" alt="International Open Data Hackathon" /></a>
+</div>
+-->
+<div class="header">
+  <p>
+    Broj lokacija: <span class="js-num-events"></span>
+    <br />
+    <a href="https://docs.google.com/spreadsheet/ccc?key=0AkCXp1Gtym9CdEx2a1NUamhkbGItNGJ6aFFyekhRWnc">Dodaj novu lokaciju &raquo;</a>
+  </p>
+</div>
+
+<div class="map" style="width: 100%; height: 100%;"></div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="recline/vendor/underscore/1.4.4/underscore.js"></script>
+<script src="recline/vendor/backbone/1.0.0/backbone.js"></script>
+<script src="recline/vendor/mustache/0.5.0-dev/mustache.js"></script>
+<script src="recline/vendor/leaflet/0.4.4/leaflet.js"></script>
+<script src="recline/vendor/leaflet.markercluster/leaflet.markercluster.js"></script>
+
+<script src="recline/dist/recline.dataset.js"></script>
+<script src="recline/src/view.map.js"></script>
+<script src="http://okfnlabs.org/recline.backend.gdocs/backend.gdocs.js"></script>
+
+<script src="js/map.js"></script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-47341762-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>
+
