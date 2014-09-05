@@ -1,5 +1,5 @@
 jQuery(function($) {
-  var url = 'https://docs.google.com/spreadsheet/ccc?key=0AkCXp1Gtym9CdEx2a1NUamhkbGItNGJ6aFFyekhRWnc';
+  var url = 'https://docs.google.com/spreadsheet/ccc?key=0AkCXp1Gtym9CdDlwZ2pDWXpVUVRycjBoRGNFZmMyTUE';
   var dataset = new recline.Model.Dataset({
     url: url,
     backend: 'gdocs'
